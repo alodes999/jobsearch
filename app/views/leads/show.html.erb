@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @lead.company_name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @lead.link %>
+</p>
+
+<p>
+  <strong>Position title:</strong>
+  <%= @lead.position_title %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @lead.location %>
+</p>
+
+<p>
+  <strong>Apply via:</strong>
+  <%= @lead.apply_via %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @lead.deadline %>
+</p>
+
+<p>
+  <strong>Found by:</strong>
+  <%= @lead.found_by %>
+</p>
+
+<p>
+  <strong>Applied:</strong>
+  <%= @lead.applied %>
+</p>
+
+<p>
+  <strong>Pending:</strong>
+  <%= @lead.pending %>
+</p>
+
+<p>
+  <strong>Offer:</strong>
+  <%= @lead.offer %>
+</p>
+
+<p>
+  <strong>Wage:</strong>
+  <%= @lead.wage %>
+</p>
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>

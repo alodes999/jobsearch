@@ -1,0 +1,61 @@
+<%= form_for(@lead) do |f| %>
+  <% if @lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% @lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_field :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :position_title %><br>
+    <%= f.text_field :position_title %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :apply_via %><br>
+    <%= f.text_field :apply_via %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.text_field :deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :found_by %><br>
+    <%= f.text_field :found_by %>
+  </div>
+  <div class="field">
+    <%= f.label :applied %><br>
+    <%= f.check_box :applied %>
+  </div>
+  <div class="field">
+    <%= f.label :pending %><br>
+    <%= f.check_box :pending %>
+  </div>
+  <div class="field">
+    <%= f.label :offer %><br>
+    <%= f.check_box :offer %>
+  </div>
+  <div class="field">
+    <%= f.label :wage %><br>
+    <%= f.number_field :wage %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

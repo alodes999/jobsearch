@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  link: MyString
+  position_title: MyString
+  location: MyString
+  apply_via: MyString
+  deadline: MyString
+  found_by: MyString
+  applied: false
+  pending: false
+  offer: false
+  wage: 1
+
+two:
+  company_name: MyString
+  link: MyString
+  position_title: MyString
+  location: MyString
+  apply_via: MyString
+  deadline: MyString
+  found_by: MyString
+  applied: false
+  pending: false
+  offer: false
+  wage: 1
