@@ -11,9 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150819202436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "leads", force: :cascade do |t|
+    t.string   "company_name"
+    t.string   "link"
+    t.string   "position_title"
+    t.string   "location"
+    t.string   "apply_via"
+    t.string   "deadline"
+    t.string   "found_by"
+    t.boolean  "applied"
+    t.boolean  "pending"
+    t.boolean  "offer"
+    t.integer  "wage"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
 end
