@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <nav>
+    <a href='<%= root_path %>'>Leads List</a>
+    <a href='<%= languages_path %>'>Languages List</a>
+  </nav>
+</header>
 <%= yield %>
 
 </body>
