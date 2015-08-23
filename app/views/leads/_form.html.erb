@@ -10,63 +10,77 @@
       </ul>
     </div>
   <% end %>
-
+<div class="company_info">
   <div class="field">
     <%= f.label :company_name %><br>
     <%= f.text_field :company_name %>
   </div>
-  <div class="field">
+  <div class="field location">
     <%= f.label :link %><br>
     <%= f.text_field :link %>
   </div>
+  <div class="field location">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field location">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="clear"></div>
   <div class="field">
     <%= f.label :position_title %><br>
     <%= f.text_field :position_title %>
   </div>
-  <div class="field">
-    <%= f.label :internship %><br>
-    <%= f.check_box :internship %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_person %><br>
-    <%= f.text_field :contact_person %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_email %><br>
-    <%= f.text_field :contact_email %>
-  </div>
-  <div class="field">
+</div>
+<div class="finer_details">
+  <div class="field contact">
     <%= f.label :apply_via %><br>
     <%= f.text_field :apply_via %>
   </div>
-  <div class="field">
+  <div class="field contact">
+    <%= f.label :contact_person %><br>
+    <%= f.text_field :contact_person %>
+  </div>
+  <div class="field contact">
+    <%= f.label :contact_email %><br>
+    <%= f.text_field :contact_email %>
+  </div>
+<div class="clear"></div>
+  <div class="field detail">
     <%= f.label :deadline %><br>
     <%= f.text_field :deadline %>
   </div>
-  <div class="field">
+  <div class="field detail">
     <%= f.label :found_by %><br>
     <%= f.text_field :found_by %>
   </div>
-  <div class="field">
+  <div class="clear"></div>
+  <div class="field detail small">
     <%= f.label :applied %><br>
     <%= f.check_box :applied %>
   </div>
-  <div class="field">
+  <div class="field detail small">
     <%= f.label :pending %><br>
     <%= f.check_box :pending %>
   </div>
-  <div class="field">
+
+  <div class="field detail small">
+    <%= f.label :internship %><br>
+    <%= f.check_box :internship %>
+  </div>
+  <div class="field detail small">
     <%= f.label :offer %><br>
     <%= f.check_box :offer %>
   </div>
-  <div class="field">
+  <div class="field detail small">
     <%= f.label :wage %><br>
     <%= f.number_field :wage %>
   </div>
+  <div class="clear"></div>
+</div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

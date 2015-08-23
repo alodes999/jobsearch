@@ -18,7 +18,7 @@ class LeadsControllerTest < ActionController::TestCase
 
   test "should create lead" do
     assert_difference('Lead.count') do
-      post :create, lead: { applied: @lead.applied, apply_via: @lead.apply_via, company_name: @lead.company_name, deadline: @lead.deadline, found_by: @lead.found_by, link: @lead.link, location: @lead.location, offer: @lead.offer, pending: @lead.pending, position_title: @lead.position_title, wage: @lead.wage }
+      post :create, lead: { applied: @lead.applied, apply_via: @lead.apply_via, company_name: @lead.company_name, deadline: @lead.deadline, found_by: @lead.found_by, link: @lead.link, city: @lead.city, offer: @lead.offer, pending: @lead.pending, position_title: @lead.position_title, wage: @lead.wage }
     end
 
     assert_redirected_to lead_path(assigns(:lead))
