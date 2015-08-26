@@ -1,3 +1,39 @@
 /*// Place all the styles related to the Leads controller here.
 // They will automatically be included in application.css.*/
+.clear{
+  clear:both;
+}
+.field {
+  display:inline;
+}
+#lead_company_name {
+    width: 60%;
+    height: 20px;
+    display:block;
+}
+.field.location, .field.contact{
+  float:left;
+  width:25%;
+}
+#lead_position_title {
+  width:40%;
+  display:block;
+}
+.details.field {
+  width:25%;
+}
+.field.detail  {
+  width:25%;
+  float:left;
+}
+.field.detail.small  {
+  width:12.5%;
+  float:left;
+}
 
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    padding: 3px 15px;
+}

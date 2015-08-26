@@ -29,7 +29,7 @@ class LeadsController < ApplicationController
     respond_to do |format|
       if @lead.save
         format.html { redirect_to leads_path, notice: 'Lead was successfully created.' }
-        format.json { render :show, status: :created, location: @lead }
+        format.json { render :show, status: :created, city: @lead }
       else
         format.html { render :new }
         format.json { render json: @lead.errors, status: :unprocessable_entity }
@@ -43,7 +43,7 @@ class LeadsController < ApplicationController
     respond_to do |format|
       if @lead.update(lead_params)
         format.html { redirect_to @lead, notice: 'Lead was successfully updated.' }
-        format.json { render :show, status: :ok, location: @lead }
+        format.json { render :show, status: :ok, city: @lead }
       else
         format.html { render :edit }
         format.json { render json: @lead.errors, status: :unprocessable_entity }
@@ -69,6 +69,6 @@ class LeadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
-      params.require(:lead).permit(:company_name, :link, :position_title, :location, :apply_via, :deadline, :found_by, :applied, :pending, :offer, :wage)
+      params.require(:lead).permit(:company_name, :link, :position_title, :city, :state, :apply_via, :deadline, :found_by, :applied, :pending, :offer, :wage)
     end
 end
