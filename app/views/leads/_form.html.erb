@@ -34,6 +34,9 @@
   </div>
 </div>
 <div class="finer_details">
+  <div>
+    <%= collection_check_boxes(:lead, :language_ids, Language.all, :id, :name) %>
+  </div>
   <div class="field contact">
     <%= f.label :apply_via %><br>
     <%= f.text_field :apply_via %>
