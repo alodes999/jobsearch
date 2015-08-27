@@ -25,6 +25,8 @@ class LeadsController < ApplicationController
   # POST /leads.json
   def create
     @lead = Lead.new(lead_params)
+    
+    add_languages_to_lead
 
     respond_to do |format|
       if @lead.save
@@ -66,7 +68,18 @@ class LeadsController < ApplicationController
     def set_lead
       @lead = Lead.find(params[:id])
     end
+    
+    def add_languages_to_lead
+      languages = params["lead"]["language_ids"]
+      languages.pop
 
+      languages.each do |id|
+        language = Language.find(id)
+        if !@lead.languages.include?(language)
+          @lead.languages << language
+        end    
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
       params.require(:lead).permit(:company_name, :link, :position_title, :city, :state, :contact_person, :contact_email, :apply_via, :deadline, :found_by, :applied, :pending, :offer, :internship, :wage)
