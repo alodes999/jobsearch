@@ -34,8 +34,12 @@
         <td><%= lead.city %></td>
         <td><%= lead.state %></td>
         <td>
-          <% lead.languages.each do |language| %>
-            <%= language.name %>
+          <% if lead.languages.length > 0 %>
+            <% lead.languages.all.each do |language| %>
+              <%= language.name %>
+            <% end %>
+          <% else %>
+            <%= "None specified" %>
           <% end %>
         </td>
         <td><%= lead.contact_person %></td>

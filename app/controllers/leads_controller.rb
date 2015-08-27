@@ -42,6 +42,8 @@ class LeadsController < ApplicationController
   # PATCH/PUT /leads/1
   # PATCH/PUT /leads/1.json
   def update
+    add_languages_to_lead
+    
     respond_to do |format|
       if @lead.update(lead_params)
         format.html { redirect_to @lead, notice: 'Lead was successfully updated.' }
@@ -70,7 +72,7 @@ class LeadsController < ApplicationController
     end
     
     def add_languages_to_lead
-      languages = params["lead"]["language_ids"]
+      languages = params["leads"]["language_ids"]
       languages.pop
 
       languages.each do |id|
@@ -82,6 +84,6 @@ class LeadsController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
-      params.require(:lead).permit(:company_name, :link, :position_title, :city, :state, :contact_person, :contact_email, :apply_via, :deadline, :found_by, :applied, :pending, :offer, :internship, :wage)
+      params.require(:lead).permit(:company_name, :link, :position_title, :city, :state, :contact_person, :contact_email, :apply_via, :deadline, :found_by, :applied, :pending, :offer, :internship, :wage, :language_ids)
     end
 end
